@@ -3,285 +3,373 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Koş, Çevir, Fethet! — Traclli Harita Tabanlı Koşu Oyun Uygulaması</title>
-  <meta name="description" content="Google Maps altyapısıyla çalışarak şehrini koşarak fethetmeni sağlayan oyunlaştırılmış yeni nesil koşu uygulaması.">
-  <meta name="theme-color" content="#ffffff">
-  
-  <!-- Google Fonts - Inter -->
+  <title>Koş, Çevir, Fethet! — Traclli</title>
+  <meta name="description" content="Google Maps üzerinde koşarak bölge fetheden oyunlaştırılmış koşu uygulaması. Koş, çevir, şehrini boya.">
+  <meta name="theme-color" content="#040F0F">
+  <link rel="icon" type="image/svg+xml" href="assets/app-icon.svg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Gajraj+One&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container nav-content">
-      <a href="#" class="brand">
-        <div class="brand-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-        Traclli
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand" aria-label="Traclli ana sayfa">
+        <img src="assets/app_icon.svg" alt="Traclli" class="brand-logo">
       </a>
 
-      <ul class="nav-links">
-        <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
-        <li><a href="#conquest-map">Canlı Harita</a></li>
-        <li><a href="#competition">Rekabet & Liderlik</a></li>
-        <li><a href="#download">İndir</a></li>
-      </ul>
+      <nav class="nav-links" id="navLinks">
+        <a href="#story">Fetih</a>
+        <a href="#mechanics">Nasıl oynanır</a>
+        <a href="#rivalry">Rekabet</a>
+        <a href="#download">İndir</a>
+      </nav>
 
-      <a href="#download" class="btn btn-primary">
-        <i class="fa-solid fa-download"></i> Hemen Katıl
-      </a>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="#download">Uygulamayı indir</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section class="hero" id="hero">
-      <div class="container">
-        <div class="hero-tag">
-          <span class="badge">
-            <span class="badge-dot"></span> Oyunlaştırılmış GPS Koşu Deneyimi
-          </span>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="live-dot"></span>
+            Google Maps üzerinde bölge fethi
+          </p>
+          <h1>Koş, Çevir, <em>Fethet!</em></h1>
+          <p class="lede">
+            GPS rotan kapanınca içindeki her park, cadde ve mahalle senin renginle boyanır.
+            Şehri koşarak ele geçir, rakiplerin bölgelerini gör, liderlikte yüksel.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#download">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              App Store
+            </a>
+            <a class="btn btn-ghost" href="#download">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76c.06.07.14.12.23.15l11.4-11.4-2.52-2.52L3.18 19.1v4.66zm.23-21.82A.4.4 0 0 0 3 2.1v19.8L14.29 10.6 3.41 1.94zM16.2 8.7l-2.2 2.2 2.52 2.52 5.07-2.9c.5-.29.5-1.03 0-1.32L16.2 8.7zM14 12.4L3.64 22.06l12.56-7.18L14 12.4z"/></svg>
+              Google Play
+            </a>
+          </div>
+          <dl class="hero-stats">
+            <div>
+              <dt>Canlı harita</dt>
+              <dd>Google Maps</dd>
+            </div>
+            <div>
+              <dt>Oyun</dt>
+              <dd>Bölge fethi</dd>
+            </div>
+            <div>
+              <dt>Rekabet</dt>
+              <dd>Şehir sıralaması</dd>
+            </div>
+          </dl>
         </div>
 
-        <h1>Koş, Çevir, <span class="highlight-text">Fethet!</span></h1>
-        <p>
-          Şehrini koşarak keşfet! Etrafını çevrelediğin her parkı, caddeyi ve bölgeyi Google Maps üzerinde kendi renginle fethet ve haritanın hakimi ol.
-        </p>
-
-        <div class="hero-ctas">
-          <a href="#download" class="btn btn-primary">
-            <i class="fa-brands fa-apple"></i> App Store'dan İndir
-          </a>
-          <a href="#download" class="btn btn-outline">
-            <i class="fa-brands fa-google-play"></i> Google Play
-          </a>
-        </div>
-
-        <!-- Phone Mockup -->
-        <div class="phone-mockup-container" id="phoneMockup">
-          <div class="phone-mockup">
+        <div class="hero-device" id="heroPhone">
+          <div class="phone">
+            <div class="phone-notch"></div>
             <div class="phone-screen">
-              <img src="assets/hero_mockup.jpg" alt="Traclli Harita ve Fetih Ekranı">
+              <div class="status-bar">
+                <span>09:41</span>
+                <span class="status-icons">LTE &nbsp; 100%</span>
+              </div>
+
+              <div class="run-top">
+                <button class="icon-btn" type="button" tabindex="-1" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                </button>
+                <div class="run-distance">
+                  <span class="run-area">0.184 km²</span>
+                  <strong class="run-km">4.82</strong>
+                  <span class="run-label">Mesafe</span>
+                </div>
+              </div>
+
+              <div class="phone-map">
+                <svg viewBox="0 0 280 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs>
+                    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+                      <path d="M28 0H0V28" fill="none" stroke="#1F2A2A" stroke-width="0.6"/>
+                    </pattern>
+                    <linearGradient id="youFill" x1="0" y1="0" x2="1" y2="1">
+                      <stop stop-color="#2BA84A" stop-opacity="0.45"/>
+                      <stop offset="1" stop-color="#A5D824" stop-opacity="0.18"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="280" height="360" fill="#121A1A"/>
+                  <rect width="280" height="360" fill="url(#grid)"/>
+                  <path d="M0 90H280" stroke="#2A3535" stroke-width="10"/>
+                  <path d="M0 210H280" stroke="#2A3535" stroke-width="8"/>
+                  <path d="M70 0V360" stroke="#2A3535" stroke-width="9"/>
+                  <path d="M190 0V360" stroke="#2A3535" stroke-width="7"/>
+                  <rect x="88" y="108" width="86" height="72" rx="4" fill="#152020"/>
+                  <polygon class="rival-poly" points="20,40 95,55 88,130 18,118" fill="#3D7EA6" fill-opacity="0.28" stroke="#5BA3C9" stroke-width="1.4"/>
+                  <polygon class="rival-poly" points="200,200 268,214 255,310 188,292" fill="#C45C2A" fill-opacity="0.25" stroke="#E07A45" stroke-width="1.4"/>
+                  <polygon id="heroFill" points="78,118 198,108 214,248 68,236" fill="url(#youFill)" stroke="#2BA84A" stroke-width="2" opacity="0"/>
+                  <polyline id="heroPath" points="78,118 198,108 214,248 68,236 78,118" fill="none" stroke="#2BA84A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="78" cy="118" r="5" fill="#FCFFFC"/>
+                  <circle cx="78" cy="118" r="10" fill="#2BA84A" fill-opacity="0.25"/>
+                </svg>
+                <div class="map-fab">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="run-bottom">
+                <div class="stat">
+                  <span>Süre</span>
+                  <strong>00:32:18</strong>
+                </div>
+                <div class="start-wrap">
+                  <button class="start-btn" type="button" tabindex="-1" aria-hidden="true">
+                    <img src="assets/start-icon.svg" alt="">
+                  </button>
+                </div>
+                <div class="stat">
+                  <span>Tempo</span>
+                  <strong>5:48</strong>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Scroll-Triggered GSAP Map Visualizer Section -->
-    <section class="scroll-section" id="conquest-map">
-      <div class="container">
-        <div class="section-title animate-on-scroll">
-          <span class="badge">Canlı Fetih Teknolojisi</span>
-          <h2>Koştukça Bölgen Renklensin</h2>
-          <p>GPS rotan kapalı bir döngü oluşturduğunda, içeride kalan tüm harita alanı otomatik olarak senin renginle kaplanır ve bölgesel skoruna eklenir.</p>
+    <!-- SCROLL STORY: phone → map conquest -->
+    <section class="story" id="story">
+      <div class="story-sticky">
+        <div class="container story-layout">
+          <div class="story-copy">
+            <p class="eyebrow"><span class="live-dot"></span> Canlı fetih</p>
+            <h2 id="storyTitle">Koştukça bölgen büyür</h2>
+            <p id="storyText">Kapalı bir döngü çizdiğinde içeride kalan her karış Google Maps üzerinde senin renginle kaplanır.</p>
+            <ol class="story-steps" aria-label="Fetih adımları">
+              <li class="is-active" data-step="0">Koş — GPS rotanı bırak</li>
+              <li data-step="1">Çevir — döngüyü kapat</li>
+              <li data-step="2">Fethet — alanı boya</li>
+            </ol>
+          </div>
+
+          <div class="story-stage">
+            <div class="map-stage" id="mapStage">
+              <svg id="conquestSvg" viewBox="0 0 640 420" role="img" aria-label="Bölge fetih haritası">
+                <defs>
+                  <pattern id="mapGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M40 0H0V40" fill="none" stroke="#1F2A2A" stroke-width="1"/>
+                  </pattern>
+                  <linearGradient id="territoryGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#2BA84A" stop-opacity="0.5"/>
+                    <stop offset="1" stop-color="#A5D824" stop-opacity="0.15"/>
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="4" result="b"/>
+                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                </defs>
+                <rect width="640" height="420" fill="#0A1212"/>
+                <rect width="640" height="420" fill="url(#mapGrid)"/>
+                <!-- streets -->
+                <path d="M0 120 Q160 90 320 130 T640 110" fill="none" stroke="#2A3535" stroke-width="14"/>
+                <path d="M0 280 Q200 250 400 300 T640 270" fill="none" stroke="#2A3535" stroke-width="12"/>
+                <path d="M140 0 V420" fill="none" stroke="#2A3535" stroke-width="11"/>
+                <path d="M430 0 V420" fill="none" stroke="#2A3535" stroke-width="9"/>
+                <rect x="200" y="150" width="170" height="110" rx="6" fill="#132020"/>
+                <text x="220" y="210" fill="#3A4848" font-size="11" font-family="Sora">Fenerbahçe Parkı</text>
+
+                <!-- rivals -->
+                <polygon class="js-rival" points="30,40 150,58 138,150 22,132" fill="#3D7EA6" fill-opacity="0.22" stroke="#5BA3C9" stroke-width="1.5"/>
+                <polygon class="js-rival" points="470,230 620,248 602,390 452,368" fill="#C45C2A" fill-opacity="0.2" stroke="#E07A45" stroke-width="1.5"/>
+                <polygon class="js-rival" points="480,30 600,48 590,130 470,112" fill="#8B5CF6" fill-opacity="0.18" stroke="#A78BFA" stroke-width="1.5"/>
+
+                <polygon id="territoryFill" points="168,128 402,112 428,292 148,274" fill="url(#territoryGrad)" stroke="#2BA84A" stroke-width="2" opacity="0"/>
+                <polyline id="conquerPath" points="168,128 402,112 428,292 148,274 168,128" fill="none" stroke="#2BA84A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+                <circle id="runnerDot" cx="168" cy="128" r="7" fill="#FCFFFC"/>
+                <circle cx="168" cy="128" r="14" fill="#2BA84A" fill-opacity="0.3" id="runnerPulse"/>
+
+                <g id="conquerBadge" transform="translate(288 200)" opacity="0">
+                  <rect x="-72" y="-22" width="144" height="44" rx="8" fill="#2BA84A"/>
+                  <text x="0" y="6" text-anchor="middle" fill="#040F0F" font-size="14" font-family="Sora" font-weight="700">FETHEDİLDİ</text>
+                </g>
+              </svg>
+              <div class="map-meta">
+                <div>
+                  <span>Kaplanan alan</span>
+                  <strong id="areaStat">0.00 km²</strong>
+                </div>
+                <div>
+                  <span>Kazanılan puan</span>
+                  <strong>+850 XP</strong>
+                </div>
+                <button class="btn btn-primary" type="button" id="replayBtn">Simülasyonu izle</button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="map-visualizer-card id="mapVisualizer" class="animate-on-scroll">
-          <div class="map-viewport">
-            <svg id="conquestMapSvg" viewBox="0 0 500 350">
-              <!-- Map Background Grid & Features -->
-              <rect width="500" height="350" fill="#eef5fc" />
-              <!-- Roads & Land outlines -->
-              <path d="M0,100 Q150,120 250,80 T500,120" stroke="#cbd5e1" stroke-width="12" fill="none" />
-              <path d="M120,0 L120,350" stroke="#cbd5e1" stroke-width="8" fill="none" />
-              <path d="M380,0 L380,350" stroke="#cbd5e1" stroke-width="10" fill="none" />
-              <rect x="180" y="140" width="160" height="120" rx="12" fill="#dcfce7" opacity="0.7" />
+    <!-- MECHANICS -->
+    <section class="section" id="mechanics">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Oyun mekaniği</p>
+          <h2>Nasıl oynanır?</h2>
+          <p>Üç adım. Koşmaya başladığın anda harita oyun tahtasına döner.</p>
+        </header>
+        <div class="steps-grid">
+          <article class="panel">
+            <span class="step-num">01</span>
+            <h3>Koşarak çevrele</h3>
+            <p>Uygulamayı aç, sokaklarda koş. GPS izinin kapalı bir hat — bir poligon — oluşturmasını sağla.</p>
+          </article>
+          <article class="panel">
+            <span class="step-num">02</span>
+            <h3>Haritayı renklendir</h3>
+            <p>Başlangıç noktasına döndüğünde çevrelenen alan anında senin renginle fetheder. Skoruna alan eklenir.</p>
+          </article>
+          <article class="panel">
+            <span class="step-num">03</span>
+            <h3>Koru, genişlet</h3>
+            <p>Diğer koşucular sınırından koşarak alanını kesebilir. Savun, komşu mahallelere doğru büyü.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-              <!-- Territory Fill Polygon (Conquered area) -->
-              <polygon id="territoryFill" points="160,120 340,110 360,260 140,240" fill="rgba(25, 120, 229, 0.25)" stroke="#1978E5" stroke-width="1" opacity="0" />
+    <!-- RIVALRY -->
+    <section class="section section-alt" id="rivalry">
+      <div class="container rivalry">
+        <header class="section-head">
+          <p class="eyebrow">Canlı rekabet</p>
+          <h2>Başkalarının fethettiği yerleri gör</h2>
+          <p>Harita ortak. Mavi, turuncu, mor — her renk başka bir koşucu. Alanını kaptırma.</p>
+        </header>
 
-              <!-- Runner GPS Path -->
-              <polyline id="conquerPath" points="160,120 340,110 360,260 140,240 160,120" fill="none" stroke="#1978E5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-
-              <!-- Conquered Badge Pop-up -->
-              <g id="conquerBadge" transform="translate(250, 180) scale(0)" style="transform-origin: 250px 180px;">
-                <circle r="36" fill="#1978E5" shadow="0 4px 10px rgba(0,0,0,0.2)" />
-                <text x="0" y="5" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">FETHEDİLDİ!</text>
-              </g>
+        <div class="rivalry-grid">
+          <div class="panel map-mini">
+            <svg viewBox="0 0 480 280" aria-hidden="true">
+              <rect width="480" height="280" fill="#0A1212"/>
+              <path d="M0 80H480M0 180H480M120 0V280M300 0V280" stroke="#1F2A2A" stroke-width="8"/>
+              <polygon points="40,30 150,44 140,130 28,116" fill="#3D7EA6" fill-opacity="0.35" stroke="#5BA3C9"/>
+              <polygon points="170,90 310,78 328,200 158,188" fill="#2BA84A" fill-opacity="0.4" stroke="#2BA84A"/>
+              <polygon points="340,120 460,136 448,250 328,232" fill="#C45C2A" fill-opacity="0.32" stroke="#E07A45"/>
+              <circle cx="40" cy="30" r="4" fill="#5BA3C9"/>
+              <circle cx="170" cy="90" r="4" fill="#2BA84A"/>
+              <circle cx="340" cy="120" r="4" fill="#E07A45"/>
             </svg>
+            <ul class="legend">
+              <li><i class="swatch you"></i> Sen — 1.42 km²</li>
+              <li><i class="swatch blue"></i> Ege — Beşiktaş</li>
+              <li><i class="swatch orange"></i> Lara — Kadıköy</li>
+            </ul>
           </div>
 
-          <div>
-            <div class="badge" style="margin-bottom: 16px;">
-              <i class="fa-solid fa-trophy"></i> Bölge Takip Paneli
+          <div class="leaderboard panel">
+            <div class="lb-head">
+              <h3>Sıralama</h3>
+              <span>Şehir · bu hafta</span>
             </div>
-            <h3 style="font-size: 1.8rem; margin-bottom: 16px;">Fenerbahçe Parkı Sektörü</h3>
-            <p style="margin-bottom: 24px;">
-              Bu sektör şu anda senin kontrolünde! Koşu temponu koruyarak bölgeni rakiplere karşı savunabilir veya komşu parklara doğru sınırlarını genişletebilirsin.
-            </p>
-
-            <div style="display: flex; gap: 24px; margin-bottom: 28px;">
-              <div>
-                <div style="font-size: 0.85rem; color: var(--text-muted);">Kaplanan Alan</div>
-                <div id="conqueredAreaStat" style="font-size: 1.4rem; font-weight: 800; color: var(--primary);">1.42 km²</div>
-              </div>
-              <div>
-                <div style="font-size: 0.85rem; color: var(--text-muted);">Kazanılan Puan</div>
-                <div style="font-size: 1.4rem; font-weight: 800; color: var(--text-dark);">+850 XP</div>
-              </div>
-            </div>
-
-            <button class="btn btn-primary" id="simulateRunBtn">
-              <i class="fa-solid fa-play"></i> Simülasyonu Başlat
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Core Gamification Features -->
-    <section class="features-section" id="how-it-works">
-      <div class="container">
-        <div class="section-title animate-on-scroll">
-          <span class="badge">Oyun Mekaniği</span>
-          <h2>Nasıl Oynanır?</h2>
-          <p>Sadece 3 adımda şehrini koşu oyun alanına çevir.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="card animate-on-scroll">
-            <div class="card-icon">
-              <i class="fa-solid fa-person-running"></i>
-            </div>
-            <h3>1. Koşarak Çevrele</h3>
-            <p>Uygulamayı başlat ve sokaklarda koşarak haritada kapalı bir hat veya poligon oluştur.</p>
-          </div>
-
-          <div class="card animate-on-scroll">
-            <div class="card-icon">
-              <i class="fa-solid fa-draw-polygon"></i>
-            </div>
-            <h3>2. Haritayı Renklendir</h3>
-            <p>Başlangıç noktasına döndüğünde çevrelenen alan anında senin takım renginle fetheder.</p>
-          </div>
-
-          <div class="card animate-on-scroll">
-            <div class="card-icon">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <h3>3. Alanını Koru & Genişlet</h3>
-            <p>Diğer koşucular senin bölgenin etrafından koşarak alanını ele geçirmeye çalışır. Bölgeni koru!</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Competitive Elements & Leaderboard -->
-    <section class="competition-section" id="competition">
-      <div class="container">
-        <div class="section-title animate-on-scroll">
-          <span class="badge">Canlı Rekabet</span>
-          <h2>Şehir Liderlik Tablosu</h2>
-          <p>En çok alan fetheden koşucular ve haftalık bölge savaşları puan durumu.</p>
-        </div>
-
-        <div class="leaderboard-card animate-on-scroll">
-          <div class="leaderboard-list">
-            <div class="leaderboard-item">
-              <div class="user-info">
-                <div class="avatar" style="background: #1978E5; color: #fff;">1</div>
-                <div class="user-details">
-                  <h4>Ahmet K. (Kadıköy Muhafızı)</h4>
-                  <span>14.8 km² Fethedilen Alan • 12 Bölge</span>
+            <ol class="lb-list">
+              <li>
+                <span class="rank">1</span>
+                <img src="assets/default-avatar.png" alt="">
+                <div>
+                  <strong>Ahmet Kaya</strong>
+                  <small>@ahmetk</small>
                 </div>
-              </div>
-              <div class="territory-tag">14.8 km²</div>
-            </div>
-
-            <div class="leaderboard-item">
-              <div class="user-info">
-                <div class="avatar">2</div>
-                <div class="user-details">
-                  <h4>Zeynep M. (Beşiktaş Koşucusu)</h4>
-                  <span>11.2 km² Fethedilen Alan • 9 Bölge</span>
+                <em>14.80 km²</em>
+              </li>
+              <li>
+                <span class="rank">2</span>
+                <img src="assets/default-avatar.png" alt="">
+                <div>
+                  <strong>Zeynep Mira</strong>
+                  <small>@zeynepm</small>
                 </div>
-              </div>
-              <div class="territory-tag" style="background: #0284c7;">11.2 km²</div>
-            </div>
-
-            <div class="leaderboard-item">
-              <div class="user-info">
-                <div class="avatar">3</div>
-                <div class="user-details">
-                  <h4>Burak T. (Moda Şampiyonu)</h4>
-                  <span>9.5 km² Fethedilen Alan • 7 Bölge</span>
+                <em>11.20 km²</em>
+              </li>
+              <li>
+                <span class="rank">3</span>
+                <img src="assets/default-avatar.png" alt="">
+                <div>
+                  <strong>Burak Tan</strong>
+                  <small>@burakt</small>
                 </div>
-              </div>
-              <div class="territory-tag" style="background: #0d9488;">9.5 km²</div>
-            </div>
+                <em>9.50 km²</em>
+              </li>
+              <li>
+                <span class="rank dim">8</span>
+                <img src="assets/default-avatar.png" alt="">
+                <div>
+                  <strong>Sen</strong>
+                  <small>@sen</small>
+                </div>
+                <em>1.42 km²</em>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer id="download">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a href="#" class="brand" style="color: #ffffff; margin-bottom: 16px;">
-            <div class="brand-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-            Traclli
-          </a>
-          <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6;">
-            Google Maps tabanlı fetih mekaniği ile koşuyu spordan eğlenceli bir rekabete dönüştüren mobil uygulama.
-          </p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Uygulama</h4>
-          <ul>
-            <li><a href="#how-it-works">Mekanikler</a></li>
-            <li><a href="#conquest-map">Fetih Haritası</a></li>
-            <li><a href="#competition">Liderlik Tablosu</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>İletişim</h4>
-          <ul>
-            <li><a href="mailto:destek@traclli.site">destek@traclli.site</a></li>
-            <li><a href="#">Sıkça Sorulan Sorular</a></li>
-            <li><a href="#">Topluluk</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>İndirin</h4>
-          <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
-            <a href="#" class="btn btn-primary" style="justify-content: flex-start;">
-              <i class="fa-brands fa-apple"></i> App Store
-            </a>
-            <a href="#" class="btn btn-outline" style="justify-content: flex-start; color: #ffffff; border-color: #334155;">
-              <i class="fa-brands fa-google-play"></i> Google Play
-            </a>
-          </div>
+  <footer class="footer" id="download">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/app-logo.png" alt="Traclli" class="brand-logo brand-logo-lg">
+        <p>Google Maps üzerinde koşarak bölge fetheden oyun. Koş, çevir, şehrini boya.</p>
+        <div class="store-row">
+          <a class="btn btn-primary" href="#">App Store</a>
+          <a class="btn btn-ghost" href="#">Google Play</a>
         </div>
       </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Traclli Technologies. Tüm hakları saklıdır.</p>
-        <div style="display: flex; gap: 16px;">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-strava"></i></a>
+      <div>
+        <h4>Uygulama</h4>
+        <a href="#story">Fetih haritası</a>
+        <a href="#mechanics">Mekanikler</a>
+        <a href="#rivalry">Sıralama</a>
+      </div>
+      <div>
+        <h4>İletişim</h4>
+        <a href="mailto:destek@traclli.site">destek@traclli.site</a>
+        <a href="#">Topluluk</a>
+        <a href="#">Gizlilik</a>
+      </div>
+      <div>
+        <h4>Sosyal</h4>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="Telegram">Telegram</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
         </div>
       </div>
     </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Traclli. Tüm hakları saklıdır.</span>
+      <span>traclli.site</span>
+    </div>
   </footer>
 
-  <!-- GSAP & ScrollTrigger Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
