@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traclli - Koşu ve GPS Takip Uygulaması | Sınırları Aş</title>
+  <meta name="description" content="Traclli ile koşu deneyimini yeniden keşfet. Yeşil tonlarında modern arayüz, gelişmiş GPS haritalama, yapay zeka koşu koçu ve canlı tempo hesaplayıcı.">
+  <meta name="theme-color" content="#060d08">
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" id="brandLogo">
+        <img src="assets/logo.jpg" alt="Traclli Logo">
+        <span class="brand-name">Trac<span>lli</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#features">Özellikler</a></li>
+          <li><a href="#calculator">Pace & Kalori</a></li>
+          <li><a href="#simulator">Canlı Rota Simülatörü</a></li>
+          <li><a href="#reviews">Yorumlar</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary trigger-download" id="navDownloadBtn">
+          <i class="fa-solid fa-download"></i> Uygulamayı İndir
+        </a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menüyü Aç">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="green-badge">
+            <span class="pulse-dot"></span> Yeni Nesil Koşu Takibi
+          </div>
+          <h1>Her Adımda Limitleri Aş: <span class="gradient-text">Traclli</span></h1>
+          <p>
+            Gelişmiş GPS doğruluğu, yapay zeka destekli tempo koçu ve yeşil doğa temasından ilham alan modern tasarımıyla koşu hedeflerine hiç olmadığı kadar hızlı ulaş.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#download" class="btn btn-primary trigger-download" id="heroDownloadBtn">
+              <i class="fa-brands fa-apple"></i> App Store'dan İndir
+            </a>
+            <a href="#download" class="btn btn-secondary trigger-download" id="heroPlayBtn">
+              <i class="fa-brands fa-google-play"></i> Google Play
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h4>100K+</h4>
+              <p>Aktif Koşucu</p>
+            </div>
+            <div class="stat-item">
+              <h4>5M+</h4>
+              <p>Tamamlanan KM</p>
+            </div>
+            <div class="stat-item">
+              <h4>4.9 ★</h4>
+              <p>Kullanıcı Puanı</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-mockup-wrapper">
+          <!-- Floating Live Data Cards -->
+          <div class="floating-card floating-card-1">
+            <div class="floating-icon">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="floating-text">
+              <div class="label">Yakılan Kalori</div>
+              <div class="val">340 kcal</div>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-2">
+            <div class="floating-icon">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <div class="floating-text">
+              <div class="label">Ort. Kalp Atışı</div>
+              <div class="val">142 BPM</div>
+            </div>
+          </div>
+
+          <!-- Hero Phone Mockup -->
+          <div class="hero-mockup-card">
+            <img src="assets/hero_mockup.jpg" alt="Traclli Uygulama Ekranı">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="green-badge">Teknoloji & Performans</div>
+          <h2>Koşunuzu Üst Seviyeye Taşıyacak Özellikler</h2>
+          <p>Traclli, her seviyeden koşucu için hassasiyet, motive edici geri bildirimler ve yeşil tonlarda göz yormayan modern bir arayüz sunar.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3>Ultra Hassas GPS & Rota</h3>
+            <p>Milimetrik hassasiyete sahip GPS haritalama algoritması ile koşturduğun her patikayı ve şehir rotasını eksiksiz kaydet.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>Yapay Zeka Koşu Koçu</h3>
+            <p>Geçmiş performansını analiz ederek sana özel günlük hedef, dinlenme süreleri ve tempo tavsiyeleri üreten akıllı algoritma.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-volume-high"></i>
+            </div>
+            <h3>Sesli Türkçe Bildirimler</h3>
+            <p>Kulaklığından anlık tempo, geçen süre ve tamamlanan her kilometre bilgisini Türkçe sesli olarak dinle.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h3>Topluluk & Yarışlar</h3>
+            <p>Arkadaşlarınla haftalık koşu meydan okumalarına katıl, yeşil liderlik tablosunda üst sıralara tırman ve rozetler kazan.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-watch-fitness"></i>
+            </div>
+            <h3>Akıllı Saat Entegrasyonu</h3>
+            <p>Apple Watch, Garmin, Strava ve Google Fit cihazlarınla anında tam senkronizasyon sağla.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Yükseklik & Eğim Analizi</h3>
+            <p>Tırmanılan rakım, eğim grafiği ve VO2 max ölçümleriyle antrenman verimliliğini derinlemesine incele.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Pace & Calorie Calculator Section -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section-header">
+          <div class="green-badge">İnteraktif Araç</div>
+          <h2>Canlı Koşu & Kalori Hesaplayıcı</h2>
+          <p>Koşmak istediğin mesafeyi ve hedef temponu seç, Traclli senin için tahmini süreni ve yakacağın kaloriyi anında hesaplasın.</p>
+        </div>
+
+        <div class="calc-card">
+          <div class="calc-grid">
+            <div class="calc-controls">
+              <div class="input-group">
+                <label for="calcDistance">Mesafe (KM): <span id="distVal">5.0 km</span></label>
+                <input type="range" id="calcDistance" class="range-slider" min="1" max="42" step="0.5" value="5">
+              </div>
+
+              <div class="input-group">
+                <label for="calcPace">Hedef Tempo (dk/km): <span id="paceVal">5:00 dk/km</span></label>
+                <input type="range" id="calcPace" class="range-slider" min="3" max="9" step="0.1" value="5">
+              </div>
+
+              <div class="input-group">
+                <label for="calcWeight">Kilonuz (KG): <span id="weightVal">70 kg</span></label>
+                <input type="range" id="calcWeight" class="range-slider" min="40" max="120" step="1" value="70">
+              </div>
+            </div>
+
+            <div class="calc-results">
+              <div class="result-box">
+                <h4>Tahmini Bitiş Süresi</h4>
+                <div class="result-value" id="resultTime">25 dk 00 sn</div>
+              </div>
+
+              <div class="result-box">
+                <h4>Tahmini Kalori Yakımı</h4>
+                <div class="result-value" id="resultCalories">363 kcal</div>
+              </div>
+
+              <div class="result-box">
+                <h4>Önerilen Sıvı Tüketimi</h4>
+                <div class="result-value" id="resultHydration">0.20 L</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Canvas Route Simulation Section -->
+    <section class="section" id="simulator">
+      <div class="container">
+        <div class="section-header">
+          <div class="green-badge">Canlı Simülasyon</div>
+          <h2>İnteraktif GPS Rota Takibi</h2>
+          <p>Traclli'nin koşu sırasındaki anlık konum takibini ve dinamik rota çizimini canlı olarak deneyimle.</p>
+        </div>
+
+        <div class="simulator-wrapper">
+          <div class="sim-header">
+            <div>
+              <h3 style="color: var(--text-white); font-size: 1.3rem;">Orman Parkuru Rota Simülasyonu</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Mesafe: <span id="simDistance" style="color: var(--accent-mint); font-weight:700;">0.00 km</span> | Yükseklik: <span id="simElevation" style="color: var(--accent-mint); font-weight:700;">+0 m</span></p>
+            </div>
+
+            <div class="sim-controls">
+              <button class="btn btn-secondary" id="simPlayBtn" style="padding: 8px 18px; font-size: 0.875rem;">
+                <i class="fa-solid fa-pause"></i> Duraklat
+              </button>
+              <button class="btn btn-secondary" id="simSpeedBtn" style="padding: 8px 18px; font-size: 0.875rem;">
+                Hız: 1x
+              </button>
+            </div>
+          </div>
+
+          <canvas id="routeCanvas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Testimonials Section -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <div class="green-badge">Topluluk Görüşleri</div>
+          <h2>Koşucular Traclli İçin Ne Diyor?</h2>
+          <p>Binlerce sporcu antrenmanlarını Traclli ile bir üst seviyeye taşıdı.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div style="color: #f59e0b; margin-bottom: 12px;">★★★★★</div>
+            <p style="font-style: italic; margin-bottom: 16px;">"Yeşil ve karanlık teması gece koşularında harika göz yormuyor. GPS doğruluğu ve sesli tempo bildirimleri mükemmel!"</p>
+            <h4 style="color: var(--text-white);">Mert Yılmaz</h4>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Maraton Koşucusu</span>
+          </div>
+
+          <div class="feature-card">
+            <div style="color: #f59e0b; margin-bottom: 12px;">★★★★★</div>
+            <p style="font-style: italic; margin-bottom: 16px;">"Yapay zeka koçu sayesinde 5K süremı 28 dakikadan 22 dakikaya düşürdüm. Kesinlikle her koşucunun telefonunda olmalı."</p>
+            <h4 style="color: var(--text-white);">Selin Demir</h4>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Yarı Maraton Sporcusu</span>
+          </div>
+
+          <div class="feature-card">
+            <div style="color: #f59e0b; margin-bottom: 12px;">★★★★★</div>
+            <p style="font-style: italic; margin-bottom: 16px;">"Kalori ve pace hesaplama araçları çok pratik. Apple Watch ile anında senkronize oluyor."</p>
+            <h4 style="color: var(--text-white);">Caner Özkan</h4>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Triatlet</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download CTA Banner Section -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="green-badge" style="margin-bottom: 20px;">Ücretsiz İndir</div>
+          <h2>Koşunun Yeni Boyutunu <br><span class="gradient-text">Bugün Keşfet</span></h2>
+          <p>Traclli'yi hemen indir, ilk patika koşunda %100 hassasiyet ve kişisel AI koçunun keyfini çıkar.</p>
+
+          <div class="app-buttons">
+            <a href="#" class="app-badge-btn trigger-download">
+              <i class="fa-brands fa-apple"></i>
+              <div class="badge-text">
+                <span>App Store'dan</span>
+                <strong>İndirin</strong>
+              </div>
+            </a>
+
+            <a href="#" class="app-badge-btn trigger-download">
+              <i class="fa-brands fa-google-play"></i>
+              <div class="badge-text">
+                <span>Google Play'den</span>
+                <strong>İndirin</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="brand-logo" style="margin-bottom: 16px;">
+            <img src="assets/logo.jpg" alt="Traclli Logo">
+            <span class="brand-name">Trac<span>lli</span></span>
+          </a>
+          <p style="color: var(--text-muted); max-width: 320px; font-size: 0.9rem; line-height: 1.6;">
+            Traclli, sporcular için tasarlanmış modern, yeşil doğa temalı GPS takip ve koşu koçu uygulamasıdır.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ürün</h4>
+          <ul>
+            <li><a href="#features">Özellikler</a></li>
+            <li><a href="#calculator">Pace Hesaplayıcı</a></li>
+            <li><a href="#simulator">Canlı Rota</a></li>
+            <li><a href="#download">İndir</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Topluluk</h4>
+          <ul>
+            <li><a href="#">Koşu Kulüpleri</a></li>
+            <li><a href="#">Etkinlikler</a></li>
+            <li><a href="#">Liderlik Tablosu</a></li>
+            <li><a href="#">Blog & Rehber</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Yasal & İletişim</h4>
+          <ul>
+            <li><a href="#">Gizlilik Politikası</a></li>
+            <li><a href="#">Kullanım Şartları</a></li>
+            <li><a href="#">Destek & İletişim</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Traclli Technologies. Tüm hakları saklıdır.</p>
+        <div style="display: flex; gap: 16px;">
+          <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" style="color: var(--text-muted);"><i class="fa-brands fa-strava"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Download / QR Code Modal Dialog -->
+  <div class="modal-backdrop" id="downloadModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <div class="green-badge" style="margin-bottom: 12px;">Kameranla Tara</div>
+      <h3 style="font-size: 1.8rem; color: var(--text-white); margin-bottom: 10px;">Traclli'yi Telefonuna Yükle</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">Mobil cihazınla QR kodunu tarayarak iOS veya Android uygulamasını anında indirin.</p>
+
+      <div class="qr-box">
+        <svg width="180" height="180" viewBox="0 0 100 100" fill="#060d08">
+          <rect x="0" y="0" width="100" height="100" fill="#ffffff" />
+          <!-- QR pattern visualization -->
+          <rect x="10" y="10" width="30" height="30" fill="#092617" />
+          <rect x="15" y="15" width="20" height="20" fill="#ffffff" />
+          <rect x="20" y="20" width="10" height="10" fill="#10b981" />
+          
+          <rect x="60" y="10" width="30" height="30" fill="#092617" />
+          <rect x="65" y="15" width="20" height="20" fill="#ffffff" />
+          <rect x="70" y="20" width="10" height="10" fill="#10b981" />
+
+          <rect x="10" y="60" width="30" height="30" fill="#092617" />
+          <rect x="15" y="65" width="20" height="20" fill="#ffffff" />
+          <rect x="20" y="70" width="10" height="10" fill="#10b981" />
+
+          <rect x="45" y="15" width="10" height="10" fill="#092617" />
+          <rect x="45" y="35" width="15" height="15" fill="#10b981" />
+          <rect x="60" y="55" width="25" height="10" fill="#092617" />
+          <rect x="45" y="75" width="10" height="15" fill="#00ff87" />
+          <rect x="70" y="75" width="20" height="20" fill="#092617" />
+        </svg>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 12px;">
+        <span class="green-badge"><i class="fa-brands fa-apple"></i> iOS</span>
+        <span class="green-badge"><i class="fa-brands fa-android"></i> Android</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
