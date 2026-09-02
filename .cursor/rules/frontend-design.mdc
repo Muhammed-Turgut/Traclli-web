@@ -1,0 +1,18 @@
+---
+description: Distinctive frontend design — load Anthropic frontend-design skill before UI work. Avoid AI slop.
+globs: "**/*.{html,css,js}"
+alwaysApply: false
+---
+
+Before writing or editing HTML, CSS, or landing-page JS, read `.cursor/skills/frontend-design/SKILL.md`.
+
+Follow its anti-slop rules. For this project also:
+
+- Default theme is **light** (`data-theme="light"`).
+- Tokens come from Run Field `lib/core/theme/app_theme.dart`:
+  - Light: scaffold `#F4F7F7`, surface `#FFFFFF`, surfaceAlt `#E8EEEE`, border `#D5DEDE`, text `#040F0F`, secondary `#3D4848`, muted `#7E8484`
+  - Brand cyan `#1BFDD2`, on-brand `#040F0F` (never white text on cyan)
+  - Dark is optional via `[data-theme="dark"]`, not the default
+- Type: Sora (UI), Gajraj One (distance), Anton SC (ranks). Not Inter.
+- Prefer real app screenshots and Google Maps over invented UI.
+- Do not use purple gradients, Inter, or generic “AI landing” layouts.
