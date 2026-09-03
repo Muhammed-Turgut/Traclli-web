@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr" data-theme="light">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Koş, Çevir, Fethet! — Traclli</title>
-  <meta name="description" content="Google Maps üzerinde koşarak bölge fetheden oyunlaştırılmış koşu uygulaması. Koş, çevir, şehrini boya.">
+  <title>Run, Loop, Conquer! — Traclli</title>
+  <meta name="description" content="A gamified running app on Google Maps. Close a GPS loop and paint the streets, parks, and neighborhoods inside it.">
   <meta name="theme-color" content="#F4F7F7">
   <link rel="icon" type="image/svg+xml" href="assets/app-icon.svg">
 
@@ -41,23 +41,23 @@
 
   <header class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="#hero" class="brand" aria-label="Traclli ana sayfa">
+      <a href="#hero" class="brand" aria-label="Traclli home">
         <svg class="brand-logo" role="img" aria-label="Traclli"><use href="#traclli-logo"/></svg>
       </a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#story">Fetih</a>
-        <a href="#mechanics">Nasıl oynanır</a>
-        <a href="#rivalry">Rekabet</a>
-        <a href="#download">İndir</a>
+        <a href="#story">Conquest</a>
+        <a href="#mechanics">How it works</a>
+        <a href="#rivalry">Rivalry</a>
+        <a href="#download">Download</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Temayı değiştir">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         </button>
-        <a class="btn btn-primary" href="#download">Uygulamayı indir</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">
+        <a class="btn btn-primary" href="#download">Get the app</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
           <span></span><span></span>
         </button>
       </div>
@@ -72,41 +72,41 @@
         <div class="hero-copy">
           <p class="eyebrow">
             <span class="live-dot"></span>
-            Google Maps üzerinde bölge fethi
+            Territory conquest on Google Maps
           </p>
-          <h1>Koş, Çevir, <em>Fethet!</em></h1>
+          <h1>Run, Loop, <em>Conquer!</em></h1>
           <p class="lede">
-            GPS rotan kapanınca içindeki her park, cadde ve mahalle senin renginle boyanır.
-            Şehri koşarak ele geçir, rakiplerin bölgelerini gör, liderlikte yüksel.
+            When your GPS path closes, every park, street, and neighborhood inside it is painted in your color.
+            Take the city on foot, see rivals’ territories, climb the leaderboard.
           </p>
           <div class="hero-cta">
-            <a class="store-badge" href="https://apps.apple.com/tr/search?term=Traclli" target="_blank" rel="noopener noreferrer">
+            <a class="store-badge" href="https://apps.apple.com/search?term=Traclli" target="_blank" rel="noopener noreferrer">
               <svg class="store-badge-icon" aria-hidden="true"><use href="#icon-apple"/></svg>
               <span class="store-badge-text">
-                <small>İndir</small>
+                <small>Download on the</small>
                 <strong>App Store</strong>
               </span>
             </a>
             <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.hamitseyrek.run_field" target="_blank" rel="noopener noreferrer">
               <svg class="store-badge-icon" aria-hidden="true"><use href="#icon-play"/></svg>
               <span class="store-badge-text">
-                <small>İndir</small>
+                <small>Get it on</small>
                 <strong>Google Play</strong>
               </span>
             </a>
           </div>
           <dl class="hero-stats">
             <div>
-              <dt>Canlı harita</dt>
+              <dt>Live map</dt>
               <dd>Google Maps</dd>
             </div>
             <div>
-              <dt>Oyun</dt>
-              <dd>Bölge fethi</dd>
+              <dt>Game</dt>
+              <dd>Territory conquest</dd>
             </div>
             <div>
-              <dt>Rekabet</dt>
-              <dd>Şehir sıralaması</dd>
+              <dt>Rivalry</dt>
+              <dd>City ranking</dd>
             </div>
           </dl>
         </div>
@@ -127,7 +127,7 @@
                 <div class="run-distance">
                   <span class="run-area">0.184 km²</span>
                   <strong class="run-km">4.82</strong>
-                  <span class="run-label">Mesafe</span>
+                  <span class="run-label">Distance</span>
                 </div>
               </div>
 
@@ -164,7 +164,7 @@
 
               <div class="run-bottom">
                 <div class="stat">
-                  <span>Süre</span>
+                  <span>Time</span>
                   <strong>00:32:18</strong>
                 </div>
                 <div class="start-wrap">
@@ -173,7 +173,7 @@
                   </button>
                 </div>
                 <div class="stat">
-                  <span>Tempo</span>
+                  <span>Pace</span>
                   <strong>5:48</strong>
                 </div>
               </div>
@@ -188,19 +188,19 @@
       <div class="story-sticky">
         <div class="container story-layout">
           <div class="story-copy">
-            <p class="eyebrow"><span class="live-dot"></span> Canlı fetih</p>
-            <h2 id="storyTitle">Koştukça bölgen büyür</h2>
-            <p id="storyText">Kapalı bir döngü çizdiğinde içeride kalan her karış Google Maps üzerinde senin renginle kaplanır.</p>
-            <ol class="story-steps" aria-label="Fetih adımları">
-              <li class="is-active" data-step="0">Koş — GPS rotanı bırak</li>
-              <li data-step="1">Çevir — döngüyü kapat</li>
-              <li data-step="2">Fethet — alanı boya</li>
+            <p class="eyebrow"><span class="live-dot"></span> Live conquest</p>
+            <h2 id="storyTitle">Your territory grows as you run</h2>
+            <p id="storyText">Close a loop and every inch inside it is painted in your color on Google Maps.</p>
+            <ol class="story-steps" aria-label="Conquest steps">
+              <li class="is-active" data-step="0">Run — leave a GPS trail</li>
+              <li data-step="1">Loop — close the circuit</li>
+              <li data-step="2">Conquer — paint the area</li>
             </ol>
           </div>
 
           <div class="story-stage">
             <div class="map-stage" id="mapStage">
-              <svg id="conquestSvg" viewBox="0 0 640 420" role="img" aria-label="Bölge fetih haritası">
+              <svg id="conquestSvg" viewBox="0 0 640 420" role="img" aria-label="Territory conquest map">
                 <defs>
                   <pattern id="mapGrid" width="40" height="40" patternUnits="userSpaceOnUse">
                     <path d="M40 0H0V40" fill="none" stroke="#D5DEDE" stroke-width="1"/>
@@ -236,19 +236,19 @@
 
                 <g id="conquerBadge" transform="translate(288 200)" opacity="0">
                   <rect x="-72" y="-22" width="144" height="44" rx="8" fill="#1BFDD2"/>
-                  <text x="0" y="6" text-anchor="middle" fill="#040F0F" font-size="14" font-family="Sora" font-weight="700">FETHEDİLDİ</text>
+                  <text x="0" y="6" text-anchor="middle" fill="#040F0F" font-size="14" font-family="Sora" font-weight="700">CONQUERED</text>
                 </g>
               </svg>
               <div class="map-meta">
                 <div>
-                  <span>Kaplanan alan</span>
+                  <span>Area claimed</span>
                   <strong id="areaStat">0.00 km²</strong>
                 </div>
                 <div>
-                  <span>Kazanılan puan</span>
+                  <span>Points earned</span>
                   <strong>+850 XP</strong>
                 </div>
-                <button class="btn btn-primary" type="button" id="replayBtn">Simülasyonu izle</button>
+                <button class="btn btn-primary" type="button" id="replayBtn">Watch simulation</button>
               </div>
             </div>
           </div>
@@ -260,25 +260,25 @@
     <section class="section" id="mechanics">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Oyun mekaniği</p>
-          <h2>Nasıl oynanır?</h2>
-          <p>Üç adım. Koşmaya başladığın anda harita oyun tahtasına döner.</p>
+          <p class="eyebrow">Game mechanics</p>
+          <h2>How it works</h2>
+          <p>Three steps. The moment you start running, the map becomes the board.</p>
         </header>
         <div class="steps-grid">
           <article class="panel">
             <span class="step-num">01</span>
-            <h3>Koşarak çevrele</h3>
-            <p>Uygulamayı aç, sokaklarda koş. GPS izinin kapalı bir hat — bir poligon — oluşturmasını sağla.</p>
+            <h3>Encircle on foot</h3>
+            <p>Open the app and run the streets. Let your GPS trail form a closed line — a polygon.</p>
           </article>
           <article class="panel">
             <span class="step-num">02</span>
-            <h3>Haritayı renklendir</h3>
-            <p>Başlangıç noktasına döndüğünde çevrelenen alan anında senin renginle fetheder. Skoruna alan eklenir.</p>
+            <h3>Paint the map</h3>
+            <p>When you return to your start point, the enclosed area is claimed in your color. The area is added to your score.</p>
           </article>
           <article class="panel">
             <span class="step-num">03</span>
-            <h3>Koru, genişlet</h3>
-            <p>Diğer koşucular sınırından koşarak alanını kesebilir. Savun, komşu mahallelere doğru büyü.</p>
+            <h3>Hold and expand</h3>
+            <p>Other runners can cut your territory by running along its edge. Defend it, or grow into the next neighborhood.</p>
           </article>
         </div>
       </div>
@@ -288,9 +288,9 @@
     <section class="section section-alt" id="rivalry">
       <div class="container rivalry">
         <header class="section-head">
-          <p class="eyebrow">Canlı rekabet</p>
-          <h2>Başkalarının fethettiği yerleri gör</h2>
-          <p>Harita ortak. Mavi, turuncu, mor — her renk başka bir koşucu. Alanını kaptırma.</p>
+          <p class="eyebrow">Live rivalry</p>
+          <h2>See what others have claimed</h2>
+          <p>The map is shared. Blue, orange, purple — each color is another runner. Don’t lose your ground.</p>
         </header>
 
         <div class="rivalry-grid">
@@ -306,7 +306,7 @@
               <circle cx="340" cy="120" r="4" fill="#E07A45"/>
             </svg>
             <ul class="legend">
-              <li><i class="swatch you"></i> Sen — 1.42 km²</li>
+              <li><i class="swatch you"></i> You — 1.42 km²</li>
               <li><i class="swatch blue"></i> Ege — Beşiktaş</li>
               <li><i class="swatch orange"></i> Lara — Kadıköy</li>
             </ul>
@@ -314,8 +314,8 @@
 
           <div class="leaderboard panel">
             <div class="lb-head">
-              <h3>Sıralama</h3>
-              <span>Şehir · bu hafta</span>
+              <h3>Leaderboard</h3>
+              <span>City · this week</span>
             </div>
             <ol class="lb-list">
               <li>
@@ -349,8 +349,8 @@
                 <span class="rank dim">8</span>
                 <img src="assets/default-avatar.png" alt="">
                 <div>
-                  <strong>Sen</strong>
-                  <small>@sen</small>
+                  <strong>You</strong>
+                  <small>@you</small>
                 </div>
                 <em>1.42 km²</em>
               </li>
@@ -365,38 +365,38 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <svg class="brand-logo brand-logo-lg" role="img" aria-label="Traclli"><use href="#traclli-logo"/></svg>
-        <p>Google Maps üzerinde koşarak bölge fetheden oyun. Koş, çevir, şehrini boya.</p>
+        <p>A running game of territory conquest on Google Maps. Run, loop, paint the city.</p>
         <div class="store-row">
-          <a class="store-badge" href="https://apps.apple.com/tr/search?term=Traclli" target="_blank" rel="noopener noreferrer">
+          <a class="store-badge" href="https://apps.apple.com/search?term=Traclli" target="_blank" rel="noopener noreferrer">
             <svg class="store-badge-icon" aria-hidden="true"><use href="#icon-apple"/></svg>
             <span class="store-badge-text">
-              <small>İndir</small>
+              <small>Download on the</small>
               <strong>App Store</strong>
             </span>
           </a>
           <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.hamitseyrek.run_field" target="_blank" rel="noopener noreferrer">
             <svg class="store-badge-icon" aria-hidden="true"><use href="#icon-play"/></svg>
             <span class="store-badge-text">
-              <small>İndir</small>
+              <small>Get it on</small>
               <strong>Google Play</strong>
             </span>
           </a>
         </div>
       </div>
       <div>
-        <h4>Uygulama</h4>
-        <a href="#story">Fetih haritası</a>
-        <a href="#mechanics">Mekanikler</a>
-        <a href="#rivalry">Sıralama</a>
+        <h4>App</h4>
+        <a href="#story">Conquest map</a>
+        <a href="#mechanics">Mechanics</a>
+        <a href="#rivalry">Leaderboard</a>
       </div>
       <div>
-        <h4>İletişim</h4>
+        <h4>Contact</h4>
         <a href="mailto:destek@traclli.site">destek@traclli.site</a>
-        <a href="#">Topluluk</a>
-        <a href="#">Gizlilik</a>
+        <a href="#">Community</a>
+        <a href="privacy.html">Privacy</a>
       </div>
       <div>
-        <h4>Sosyal</h4>
+        <h4>Social</h4>
         <div class="socials">
           <a href="#" aria-label="Instagram">Instagram</a>
           <a href="#" aria-label="X">X</a>
@@ -406,11 +406,12 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <span>© 2026 Traclli. Tüm hakları saklıdır.</span>
+      <span>© 2026 Traclli. All rights reserved.</span>
       <span>traclli.site</span>
     </div>
   </footer>
 
+  <script src="site.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
