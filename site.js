@@ -5,8 +5,7 @@
 window.TRACLLI_CONFIG = {
   appName: "Traclli",
   domain: "traclli.site",
-  supportEmail: "destek@traclli.site",
-  fallbackEmail: "randomegitim@gmail.com",
+  supportEmail: "randomegitim@gmail.com",
   appStoreUrl: "https://apps.apple.com/search?term=Traclli",
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.hamitseyrek.run_field"
 };
