@@ -1,3 +1,16 @@
+/**
+ * Traclli Central Configuration
+ * Easily update support contact details and application settings here.
+ */
+window.TRACLLI_CONFIG = {
+  appName: "Traclli",
+  domain: "traclli.site",
+  supportEmail: "destek@traclli.site",
+  fallbackEmail: "randomegitim@gmail.com",
+  appStoreUrl: "https://apps.apple.com/search?term=Traclli",
+  playStoreUrl: "https://play.google.com/store/apps/details?id=com.hamitseyrek.run_field"
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.getElementById("nav");
   const toggle = document.getElementById("navToggle");
